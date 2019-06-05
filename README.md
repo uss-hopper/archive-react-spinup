@@ -13,7 +13,7 @@
 "http-proxy-middleware": "^0.19.1",
 "jquery": "^3.4.1",
 "popper": "^1.0.1",
-react-router": "^5.0.1",
+"react-router": "^5.0.1",
 "react-router-bootstrap": "^0.25.0",
 "react-router-dom": "^5.0.0",
 "redux": "^4.0.1",
@@ -50,7 +50,8 @@ module.exports = function(app) {
 	}));
 };
 ```
-## Add React Router
+## Add React Router To The 
+1. create a new 
 
 
 
