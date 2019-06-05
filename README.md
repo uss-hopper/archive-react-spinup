@@ -1,6 +1,6 @@
 # React SpinUp 
 ## Adding React To an Existing Project
-### React Spinup must be completed by one member of the team but it is 
+### React Spinup must be completed by one member of the team but it is recommended that it is done as a group with the rest of the team members  watching/looking for missing semi colons.
 1. cd into the project and run `npx create-react-app app`
 2. add the following packages to package.json in the dependencies object
 ```
