@@ -1,5 +1,6 @@
 # React SpinUp 
 ## Adding React To an Existing Project
+### React Spinup must be completed by one member of the team but it is 
 1. cd into the project and run `npx create-react-app app`
 2. add the following packages to package.json in the dependencies object
 ```
@@ -12,6 +13,7 @@
 "http-proxy-middleware": "^0.19.1",
 "jquery": "^3.4.1",
 "popper": "^1.0.1",
+react-router": "^5.0.1",
 "react-router-bootstrap": "^0.25.0",
 "react-router-dom": "^5.0.0",
 "redux": "^4.0.1",
@@ -28,7 +30,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 
-const App = () => (<h1>hello world</h1>);
+const App = () => ( <h1 className="text-info">hello world</h1> );
 ReactDOM.render(<App/>, document.querySelector('#root'));
 ```
 * __Optional__ run npm start in `/app` to see if the setup was successful
@@ -48,7 +50,7 @@ module.exports = function(app) {
 	}));
 };
 ```
-## 
+## Add React Router
 
 
 
