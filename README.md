@@ -1,5 +1,5 @@
 # React SpinUp 
-## Adding React to an existing project
+## Adding React To an Existing Project
 1. cd into the project and run `npx create-react-app app`
 2. add the following packages to package.json in the dependencies object
 ```
@@ -32,6 +32,24 @@ const App = () => (<h1>hello world</h1>);
 ReactDOM.render(<App/>, document.querySelector('#root'));
 ```
 * __Optional__ run npm start in `/app` to see if the setup was successful
+## Setting up the Dev Server.
+1. add `/app/src/setupProxy.js` to the `/.gitignore` file
+2. create the file `/app/src/SetupProxyy.js` and add the content below
+	* make sure to update the file to match your _username_ and _project_ each team member must do this step
+```
+const proxy = require('http-proxy-middleware');
+module.exports = function(app) {
+	app.use(proxy('/apis', {
+		logLevel: 'debug',
+		target: "https://bootcamp-coders.cnm.edu/~username/project/php/public_html/",
+		changeOrigin: true,
+		secure: true,
+
+	}));
+};
+```
+## 
+
 
 
 
