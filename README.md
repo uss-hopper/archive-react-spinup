@@ -36,7 +36,7 @@ ReactDOM.render(<App/>, document.querySelector('#root'));
 * __Optional__ run npm start in `/app` to see if the setup was successful
 ## Setting up the Dev Server.
 1. add `/app/src/setupProxy.js` to the `/.gitignore` file
-2. create the file `/app/src/SetupProxyy.js` and add the content below
+2. create the file `/app/src/setupProxy.js` and add the content below
 	* make sure to update the file to match your _username_ and _project_ each team member must do this step
 ```
 const proxy = require('http-proxy-middleware');
