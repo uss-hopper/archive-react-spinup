@@ -13,6 +13,7 @@
 "http-proxy-middleware": "^0.19.1",
 "jquery": "^3.4.1",
 "popper": "^1.0.1",
+"react-redux": "^7.0.3",
 "react-router": "^5.0.1",
 "react-router-bootstrap": "^0.25.0",
 "react-router-dom": "^5.0.0",
