@@ -51,9 +51,69 @@ module.exports = function(app) {
 	}));
 };
 ```
-## Add React Router To The 
-1. create a new 
+## Add React Router To The project
+1. Create a new Component called Home in `/app/src/pages`
+2. Add the content below to the file
+```
+import React from "react"
 
+export const Home = () => {
+	return (
+		<>
+			<h1>Home</h1>
+		</>
+	)
+}
+```
+3. create a new component called FourOhFour in `/app/src/pages`
+add the content below to the file
+```
+import React from "react"
 
+export const FourOhFour = () => {
+	return (
+		<>
+			<h1>Y U NO FIND</h1>
+		</>
+	)
+};
 
+```
+4. replace 
+ ```
+ import React from 'react';
+ import ReactDOM from 'react-dom'
+ import 'bootstrap/dist/css/bootstrap.css';
+ import 'bootstrap/dist/js/bootstrap.bundle.min';
+ 
+ 
+ const App = () => (<h1 className="text-info">hello world</h1>);
+ ReactDOM.render(<App/>, document.querySelector('#root'));
+ ```
+ 
+ with 
+```
+import React from 'react';
+import ReactDOM from 'react-dom'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import {BrowserRouter} from "react-router-dom";
+import {Route, Switch} from "react-router";
+import {FourOhFour} from "./pages/FourOhFour";
+import {Home} from "./pages/Home";
 
+const Routing = () => (
+	<>
+
+		<BrowserRouter>
+			<Switch>
+				<Route exact path="/" component={Home}/>
+				<Route component={FourOhFour}/>
+			</Switch>
+		</BrowserRouter>
+
+	</>
+);
+ReactDOM.render(<Routing/>, document.querySelector('#root'));
+
+```
