@@ -5,7 +5,8 @@
 /node_modules
 /app/node_modules
 /php/vendor
-/app/src/setupProxy.js
 /vendor
 /npm-debug.log
 
+
+/app/src/setupProxy.js
