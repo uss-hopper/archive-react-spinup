@@ -24,8 +24,8 @@
     "redux-thunk": "^2.3.0",
     "yup": "^0.27.0"
 ```
-3. Run `rm -rf node_modules package-lock.json` in the /app directory.
-4. Run `npm install` in the /app directory.
+3. Run `rm -rf node_modules package-lock.json` in `/app`.
+4. Run `npm install` in `/app`.
 5. Delete every file in `app/src`.
 6. Create a new file called `app/src/index.js` with the content below.
 ```
