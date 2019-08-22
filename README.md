@@ -1,9 +1,9 @@
-# React SpinUp 
+# React SpinUp.
 ## Prerequisites.
 * `node`, `npm`, and `create-react-app` are installed.
 ## Adding React To an Existing Project.
 1. `cd` into the project and run `npx create-react-app app`.
-2. Rewrite the dependencies object in `/app/package.json`.
+2. Rewrite the dependencies object in `/app/package.json` with the content below.
 ```
   "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
@@ -38,20 +38,30 @@ ReactDOM.render(<App/>, document.querySelector('#root'));
 ```
 * __Optional__ run npm start in `/app` to see if the setup was successful
 ## Setting Up The Dev Server.
-1. Add `/app/src/setupProxy.js` to the `/.gitignore` file.
-2. create the file `/app/src/setupProxy.js` and add the content below
-    * each team member must do this step
-	* make sure to update the target to match your _username_ and _project_ 
+1. Rewrite `/.gitignore` with the content below.
+```
+.DS_Store
+/.sync-config.cson
+/.idea
+/vendor
+/node_modules
+/app/node_modules
+/php/vendor
+/app/src/setupProxy.js
+/vendor
+/npm-debug.log
+```
+2. Create the file `/app/src/setupProxy.js` with the content below.
+    * Each team member must do this step.
+   * Make sure to update the target to match your _username_ and _project_ .
 ```
 const proxy = require('http-proxy-middleware');
 module.exports = function(app) {
-	app.use(proxy('/apis', {
-		logLevel: 'debug',
-		target: "https://bootcamp-coders.cnm.edu/~username/project/php/public_html/",
-		changeOrigin: true,
-		secure: true,
-
-	}));
+   app.use(proxy('/apis', {
+      logLevel: 'debug',
+      target: "https://bootcamp-coders.cnm.edu/~username/project/php/public_html/",
+      changeOrigin: true,
+      secure: true, }));
 };
 ```
 ## Adding React Router To A Project.
@@ -60,11 +70,11 @@ module.exports = function(app) {
 import React from "react"
 
 export const Home = () => {
-	return (
-		<>
-			<h1>Home</h1>
-		</>
-	)
+   return (
+      <>
+         <h1>Home</h1>
+      </>
+   )
 }
 ```
 2. Create a new component called FourOhFour in `/app/src/pages` with the content below.
@@ -72,11 +82,11 @@ export const Home = () => {
 import React from "react"
 
 export const FourOhFour = () => {
-	return (
-		<>
-			<h1>Y U NO FIND</h1>
-		</>
-	)
+   return (
+      <>
+         <h1>Y U NO FIND</h1>
+      </>
+   )
 };
 
 ```
@@ -91,14 +101,14 @@ import {FourOhFour} from "./pages/FourOhFour";
 import {Home} from "./pages/Home";
 
 const Routing = () => (
-	<>
+   <>
         <BrowserRouter>
-			<Switch>
-				<Route exact path="/" component={Home}/>
-				<Route component={FourOhFour}/>
-			</Switch>
-		</BrowserRouter>
-	</>
+         <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route component={FourOhFour}/>
+         </Switch>
+      </BrowserRouter>
+   </>
 );
 ReactDOM.render(<Routing/>, document.querySelector('#root'));
 ```
