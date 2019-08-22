@@ -27,7 +27,7 @@
 3. Run `rm -rf node_modules package-lock.json` in the /app directory.
 4. Run `npm install` in the /app directory.
 5. Delete every file in `app/src`.
-6. Create a new file called `app/src/index.js` and add the content below.
+6. Create a new file called `app/src/index.js` with the content below.
 ```
 import React from 'react';
 import ReactDOM from 'react-dom'
