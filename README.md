@@ -1,9 +1,9 @@
 # React SpinUp 
-## Prerequisite
-* node, npm, and create-react-app are installed.
-## Adding React To an Existing Project
-1. cd into the project and run `npx create-react-app app`
-2. rewrite the dependencies object in `/app/package.json`
+## Prerequisites.
+* `node`, `npm`, and `create-react-app` are installed.
+## Adding React To an Existing Project.
+1. `cd` into the project and run `npx create-react-app app`.
+2. Rewrite the dependencies object in `/app/package.json`.
 ```
   "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
@@ -24,11 +24,10 @@
     "redux-thunk": "^2.3.0",
     "yup": "^0.27.0"
 ```
-
-3. run `rm -rf node_modules package-lock.json` in the /app directory
-4. run `npm install` in the /app directory
-5. delete every file in `app/src`
-6. create a new file called `app/src/index.js` and add the content below
+3. Run `rm -rf node_modules package-lock.json` in the /app directory.
+4. Run `npm install` in the /app directory.
+5. Delete every file in `app/src`.
+6. Create a new file called `app/src/index.js` and add the content below.
 ```
 import React from 'react';
 import ReactDOM from 'react-dom'
@@ -38,8 +37,8 @@ const App = () => ( <h1 className="text-info">hello world</h1> );
 ReactDOM.render(<App/>, document.querySelector('#root'));
 ```
 * __Optional__ run npm start in `/app` to see if the setup was successful
-## Setting up the Dev Server.
-1. add `/app/src/setupProxy.js` to the `/.gitignore` file
+## Setting Up The Dev Server.
+1. Add `/app/src/setupProxy.js` to the `/.gitignore` file.
 2. create the file `/app/src/setupProxy.js` and add the content below
     * each team member must do this step
 	* make sure to update the target to match your _username_ and _project_ 
@@ -55,7 +54,7 @@ module.exports = function(app) {
 	}));
 };
 ```
-## Add React Router To The project
+## Adding React Router To A Project.
 1. Create a new Component called Home in `/app/src/pages` with the content below.
 ```
 import React from "react"
@@ -68,7 +67,7 @@ export const Home = () => {
 	)
 }
 ```
-2. create a new component called FourOhFour in `/app/src/pages` with the content below.
+2. Create a new component called FourOhFour in `/app/src/pages` with the content below.
 ```
 import React from "react"
 
@@ -81,7 +80,7 @@ export const FourOhFour = () => {
 };
 
 ```
-3. rewrite `/app/src/index.js` with the content below.
+3. Rewrite `/app/src/index.js` with the content below.
 ```
 import React from 'react';
 import ReactDOM from 'react-dom'
