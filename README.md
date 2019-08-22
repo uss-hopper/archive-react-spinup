@@ -36,7 +36,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 const App = () => ( <h1 className="text-info">hello world</h1> );
 ReactDOM.render(<App/>, document.querySelector('#root'));
 ```
-* __Optional__ run npm start in `/app` to see if the setup was successful
+* __Optional__ run `npm run start` in `/app` to see if the setup was successful.
 ## Setting Up The Dev Server.
 1. Rewrite `/.gitignore` with the content below.
 ```
