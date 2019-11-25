@@ -48,7 +48,6 @@ ReactDOM.render(<App/>, document.querySelector('#root'));
 /app/node_modules
 /php/vendor
 /app/src/setupProxy.js
-/vendor
 /npm-debug.log
 ```
 2. Create the file `/app/src/setupProxy.js` with the content below.
