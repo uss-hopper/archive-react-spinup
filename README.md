@@ -1,3 +1,5 @@
+This project has been archived.  The most recent version can be found at https://github.com/Deep-Dive-Coding-Fullstack-Licensing/react-spinup/tree/v1.0.0
+
 # React SpinUp.
 ## Prerequisites.
 * `node`, `npm`, and `create-react-app` are installed.
